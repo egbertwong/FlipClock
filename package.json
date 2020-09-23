@@ -1,0 +1,24 @@
+{
+  "name": "flip-clock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egbertwong/FlipClock.git"
+  },
+  "author": "egbertwong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egbertwong/FlipClock/issues"
+  },
+  "homepage": "https://github.com/egbertwong/FlipClock#readme",
+  "devDependencies": {
+    "electron": "^10.1.2",
+    "flipdown": "^0.3.2"
+  }
+}
