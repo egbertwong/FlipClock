@@ -5,13 +5,14 @@ function createWindow () {
   const win = new BrowserWindow({
     width: 800,
     height: 600,
+    autoHideMenuBar: true,
     webPreferences: {
       nodeIntegration: true
     }
   })
 
   // 并且为你的应用加载index.html
-  win.loadFile('index.html')
+  win.loadFile('res/view/index.html')
 
   // 打开开发者工具
   win.webContents.openDevTools()
