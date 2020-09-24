@@ -5,9 +5,16 @@
 	<meta charset="UTF-8">
 	<title>Flipper</title>
 	<link rel="stylesheet" href="../css/index.css">
+	<script src="../../src/index.js"></script>
 </head>
 
-<body>
+<body class="body" onclick="close();">
+	<div>
+		<img src="../drawable/pin_black_16.svg" style="margin: 4px; float: left; -webkit-app-region: no-drag;"
+			onclick="event.cancelBubble = true">
+		<img src="../drawable/close_black_16.svg" style="margin: 4px; float: right; -webkit-app-region: no-drag;"
+			onclick="closeWindow();">
+	</div>
 	<div class="clock" id="clock">
 		<div class="flip down">
 			<div class="digital front number0"></div>
@@ -38,6 +45,6 @@
 	</div>
 </body>
 
-<script src="../../src/index.js"></script>
+<script src="../../src/flip.js"></script>
 
 </html>
