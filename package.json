@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "nodemon --watch main.js --exec electron .",
     "test": "start"
   },
   "repository": {
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/egbertwong/FlipClock#readme",
   "devDependencies": {
     "electron": "^10.1.2",
-    "flipdown": "^0.3.2"
+    "flipdown": "^0.3.2",
+    "nodemon": "^2.0.4"
   }
 }
