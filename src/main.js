@@ -26,8 +26,8 @@ class AppWindow extends BrowserWindow {
 function createWindow() {
   // 创建浏览器窗口
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 600,
+    height: 150,
     autoHideMenuBar: true,
     frame: false,
     webPreferences: {
@@ -39,7 +39,7 @@ function createWindow() {
   win.loadFile('res/view/index.html')
 
   // 打开开发者工具
-  win.webContents.openDevTools()
+  // win.webContents.openDevTools()
 
   // 关闭窗口
   ipcMain.on('close', () => {
