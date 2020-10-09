@@ -1,11 +1,72 @@
 {
   "name": "flip-clock",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "./src/main.js",
   "scripts": {
     "start": "nodemon --watch main.js --exec electron .",
-    "test": "start"
+    "test": "start",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "productName": "Flip Clock",
+    "appId": "net.egbw.flipclock",
+    "copyright": "EgbW",
+    "directories": {
+      "output": "build"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./res/drawable/clock.ico",
+      "uninstallerIcon": "./res/drawable/clock.ico",
+      "installerHeaderIcon": "./res/drawable/clock.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Flip Clock"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://xxxxx/"
+      }
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "./res/drawable/clock.ico"
+    },
+    "win": {
+      "icon": "./res/drawable/clock.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "icon": "./res/drawable/clock.ico"
+    },
+    "electronDownload": {
+      "mirror": "https://npm.taobao.org/mirrors/electron/"
+    }
   },
   "repository": {
     "type": "git",
@@ -20,6 +81,7 @@
   "devDependencies": {
     "electron": "^10.1.2",
     "flipdown": "^0.3.2",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "electron-builder": "^22.8.1"
   }
 }
