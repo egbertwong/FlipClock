@@ -12,7 +12,8 @@
 
 .body {
   margin: 0px;
-  -webkit-app-region: drag
+  -webkit-app-region: drag;
+  -webkit-user-select:none;
 }
 
 
